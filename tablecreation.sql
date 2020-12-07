@@ -14,26 +14,6 @@ CREATE TABLE `alternate_person` (
   `relationship_to_patient` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-CREATE TABLE `belongs_to` (
-  `clinic_name` varchar(50) NOT NULL,
-  `zip` int(5) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `street` varchar(50) NOT NULL,
-  `state` varchar(50) NOT NULL,
-  `UPIN` int(10) NOT NULL,
-  `doctor_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `clinic` (
-  `clinic_name` varchar(50) NOT NULL,
-  `zip` int(5) NOT NULL,
-  `city` varchar(50) NOT NULL,
-  `street` varchar(50) NOT NULL,
-  `state` varchar(50) NOT NULL,
-  `start_date` varchar(50) NOT NULL,
-  `end_date` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 CREATE TABLE `doctor` (
   `UPIN` int(10) NOT NULL,
   `doctor_name` varchar(50) NOT NULL
@@ -60,12 +40,6 @@ CREATE TABLE `has_a` (
   `ssn` int(9) NOT NULL,
   `p_first` varchar(50) NOT NULL,
   `p_last` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-CREATE TABLE `has_access_to` (
-  `UPIN` int(10) NOT NULL,
-  `doctor_name` varchar(50) NOT NULL,
-  `RID` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `insurance` (
